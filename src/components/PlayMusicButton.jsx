@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default function PlayMusicButton(){
   const [playing, setPlaying] = useState(false)
   // TODO: أضف ملف bg-music.wav في public/assets/
-  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/assets/bg-music.wav') : null)
+  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/bg-music.mp3') : null)
 
   useEffect(() => {
     if(audio) {

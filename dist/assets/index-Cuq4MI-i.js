@@ -13622,9 +13622,7 @@ var fn = He.registerPlugin(qp) || He;
 fn.core.Tween;
 function K_({ onStart: t }) {
   const e = ae.useRef(null),
-    [n] = ae.useState(
-      typeof window < "u" ? new Audio("/assets/bg-music.mp3") : null
-    ),
+    [n] = ae.useState(typeof window < "u" ? new Audio("/bg-music.mp3") : null),
     [r, i] = ae.useState(!1);
   ae.useEffect(() => {
     const s = e.current;

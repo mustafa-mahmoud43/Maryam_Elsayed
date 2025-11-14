@@ -4,7 +4,7 @@ import gsap from 'gsap'
 export default function TerminalIntro({ onStart }){
   const boxRef = useRef(null)
   // TODO: أضف ملف bg-music.mp3 في src/assets/ أو public/assets/
-  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/assets/bg-music.wav') : null)
+  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/bg-music.mp3') : null)
   const [playing, setPlaying] = useState(false)
 
   useEffect(() =>{
