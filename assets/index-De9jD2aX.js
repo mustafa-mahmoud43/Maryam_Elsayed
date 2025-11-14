@@ -13622,9 +13622,7 @@ var fn = He.registerPlugin(qp) || He;
 fn.core.Tween;
 function K_({ onStart: t }) {
   const e = ae.useRef(null),
-    [n] = ae.useState(
-      typeof window < "u" ? new Audio("/assets/bg-music.wav") : null
-    ),
+    [n] = ae.useState(typeof window < "u" ? new Audio("/bg-music.mp3") : null),
     [r, i] = ae.useState(!1);
   ae.useEffect(() => {
     const s = e.current;
@@ -13970,9 +13968,9 @@ const b_ = () => {
         Jp("/api/v1.0/email/send-form", c));
   },
   cg = { init: eg, send: og, sendForm: fg, EmailJSResponseStatus: ji },
-  dg = void 0,
-  pg = void 0,
-  hg = void 0,
+  dg = "service_42anume",
+  pg = "template_m7vxcd5",
+  hg = "n8ehA-7nO_i99CcV3",
   mg = async (t, e, n) => {
     try {
       const r =
