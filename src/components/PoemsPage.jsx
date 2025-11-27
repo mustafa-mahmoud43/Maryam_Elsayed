@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
-import { POEMS } from "../assets/poems";
+import { POEMS, message } from "../assets/poems";
 
 export default function PoemsPage({ onNext }) {
   const pageRef = useRef(null);
@@ -26,77 +26,77 @@ export default function PoemsPage({ onNext }) {
       ref={pageRef}
       className="relative page-card p-8 mx-2 min-h-[600px] overflow-hidden"
     >
-      {/* Falling Roses Background - يبدأ التساقط فوراً */}
+      {/* Falling Roses Background - تساقط مرة واحدة فقط */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="falling-rose"
-          style={{ animation: "fall 8s linear infinite" }}
+          style={{ animation: "fall 8s linear 1 forwards" }}
         >
           🌹
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 10s linear infinite" }}
+          style={{ animation: "fall 10s linear 1 forwards", animationDelay: "0.5s" }}
         >
           🌷
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 9s linear infinite " }}
+          style={{ animation: "fall 9s linear 1 forwards", animationDelay: "1s" }}
         >
           🌺
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 11s linear infinite" }}
+          style={{ animation: "fall 11s linear 1 forwards", animationDelay: "0.3s" }}
         >
           🌸
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 8.5s linear infinite" }}
+          style={{ animation: "fall 8.5s linear 1 forwards", animationDelay: "0.8s" }}
         >
           🌹
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 9.5s linear infinite" }}
+          style={{ animation: "fall 9.5s linear 1 forwards", animationDelay: "1.2s" }}
         >
           🌷
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 10.5s linear infinite" }}
+          style={{ animation: "fall 10.5s linear 1 forwards", animationDelay: "0.2s" }}
         >
           🌺
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 8.8s linear infinite" }}
+          style={{ animation: "fall 8.8s linear 1 forwards", animationDelay: "1.5s" }}
         >
           🌸
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 9.2s linear infinite" }}
+          style={{ animation: "fall 9.2s linear 1 forwards", animationDelay: "0.4s" }}
         >
           🌹
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 10.2s linear infinite" }}
+          style={{ animation: "fall 10.2s linear 1 forwards", animationDelay: "1.8s" }}
         >
           🌷
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 9.8s linear infinite" }}
+          style={{ animation: "fall 9.8s linear 1 forwards", animationDelay: "0.7s" }}
         >
           🌺
         </div>
         <div
           className="falling-rose"
-          style={{ animation: "fall 8.3s linear infinite" }}
+          style={{ animation: "fall 8.3s linear 1 forwards", animationDelay: "1.3s" }}
         >
           🌸
         </div>
@@ -112,24 +112,7 @@ export default function PoemsPage({ onNext }) {
               textAlign: "center",
             }}
           >
-            {`
-            هناك لحظات معينة في الحياة تترك أثرًا بسيطًا… لكنه لا يشبه أي شيء آخر. 
-            ولأسباب لا أعرف كيف أشرحها بدقة، كانت رؤيتي لكِ إحدى هذه اللحظات.
-             رغم قِصر المرات التي رأيتك فيها، إلا أنكِ لم تغادري عقلي يومًا.
-              وفي وسط الناس، وفي عزّ انشغالي وضجيج الحياة من حولي، أجد نفسي أفكر فيكِ. 
-              وكأن شيئًا هادئًا وجميلًا يلفتني إليكِ كل مرة.
-               لا أخفي عليكِ أنني ارتحتُ لشخصيتك وهدوئك، وشعرت أنكِ إنسانة مختلفة…
-                شخص يستحق أن يُقترب منه باحترام، وأن تُمنح العلاقة معه فرصة لتكبر خطوة بخطوة. 
-                ولهذا كتبت لكِ اليوم، لأقول لكِ كما قال الشاعر: 
-                وَقَفَ الْقَلْبُ بِيَ بَيْنَ يَدَيْكِ 
-                وَاعْتَرَفَ بِكُلِّ ما فِي ضَمِيرِي 
-                أَنْتِ النَّدَى وَالْهُدَى وَالْحَنَانُ 
-                وَشُعَاعُ نَجْمَةٍ فِيْ قَلْبِظْلْمِي 
-                لستُ هنا لأعِدَكِ بالجنان، بل لأعدكِ بأنني سأبذل كل ما في وسعي، بصدق وإخلاص، لأن تكون هذه الدنيا التي نسيرها معاً جنّةً لكِ.
-                 سأعمل لأكون سندكِ، وأذنكِ التي تسمع، وقلبكِ الذي يفهم. 
-                 هدفي هو رؤية البسمة لا تفارق محيّاكِ، والسعادة رفيقة دربكِ.
-            
-            `}
+            {message}
           </p>
         </div>
 
