@@ -398,6 +398,9 @@ video {
 .max-w-\[200px\] {
   max-width: 200px;
 }
+.max-w-md {
+  max-width: 28rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -513,6 +516,9 @@ video {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-6 {
+  padding: 1.5rem;
 }
 .p-8 {
   padding: 2rem;
@@ -843,8 +849,8 @@ body {
   .md\:flex-row {
     flex-direction: row;
   }
-  .md\:p-12 {
-    padding: 3rem;
+  .md\:p-10 {
+    padding: 2.5rem;
   }
   .md\:text-2xl {
     font-size: 1.5rem;
