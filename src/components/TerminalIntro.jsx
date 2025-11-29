@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { sendWelcomeEmail } from "../utils/emailService";
 
 export default function TerminalIntro({ onStart }) {
   const boxRef = useRef(null);
@@ -98,6 +99,8 @@ export default function TerminalIntro({ onStart }) {
       delay: 0.18,
       onComplete: () => onStart(audio, isPlaying),
     });
+
+    sendWelcomeEmail();
   };
 
   return (
